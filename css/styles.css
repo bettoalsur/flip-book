@@ -1,0 +1,199 @@
+.container {
+    background-color: #aaa;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sheet {
+    margin: 0px;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+
+    transform-origin: left;
+    transform: translateX(50%);
+}
+
+.sheet.turned {
+    transform: rotateY(180deg) translateX(-50%);
+}
+
+.sheet.centered {
+    transform: translateX(0%);
+}
+
+.face {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+
+    background-color: white;
+    border: 1px solid black;
+
+    position: absolute;
+
+    transition: all 0.5s;
+    backface-visibility: hidden;
+
+    /* compatibildiade iOS */
+    -webkit-backface-visibility: hidden;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.front {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    box-shadow: inset 5px 0px 10px -1px rgb(70, 70, 70),
+    0px 5px 7px rgb(27, 27, 27);
+}
+
+.back {
+    transform: rotateY(180deg);
+
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: inset -5px 0px 10px -1px rgb(70, 70, 70),
+    0px 5px 7px rgb(27, 27, 27);;
+}
+
+/* Content Styles */
+
+.front-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-page p {
+    font-size: 36px;
+    color: #335384;
+    text-align: center;
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: bold;
+}
+
+.cv {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    flex-direction: column;
+}
+
+.photo-name {
+    width: 100%;
+    background-color: #335384;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+}
+
+.photo-name img {
+    width: 100px;
+    min-width: 100px;
+    aspect-ratio: 1 / 1;
+    margin: 10px;
+
+    border-radius: 50%;
+    border: solid 1px black;
+
+    object-fit: cover;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+
+    margin: 10px;
+    font-family: 'GlacialIndifferenceRegular';
+}
+
+.description {
+    width: 100%;
+}
+
+.description p {
+    color: #335384;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 20px 0px;
+    font-family: 'Assistant', sans-serif;
+
+    text-align: justify;
+}
+
+.contact-box {
+    width: 100%;
+}
+
+.contact-box span p {
+    font-weight: bold;
+    color: #444440;
+    font-size: 14px;
+    font-family: 'Assistant', sans-serif;
+}
+
+.contact-box ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.contact-box ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 5px;
+}
+
+.contact-box ul li .icon-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 14px;
+    height: 14px;
+
+    margin-right: 5px;
+}
+
+.contact-box ul li .icon-space ion-icon {
+    font-size: 12px;
+    color: #444440;
+}
+
+.contact-box ul li > span,
+.contact-box ul li > a span {
+    font-size: 12px;
+    font-family: 'GlacialIndifferenceRegular';
+    color: #444440;
+}
+
+a, a:link, a:visited,  a:hover, a:active {
+    text-decoration: none;
+    display: flex;
+}
