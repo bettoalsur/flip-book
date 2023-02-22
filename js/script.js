@@ -1,6 +1,7 @@
 
 const fileName = "data_base";
-const input = `${fileName}.csv`;
+const fileExtension = "txt"
+const input = `${fileName}.${fileExtension}`;
 let professors = [];
 
 getData();
